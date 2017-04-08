@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<link rel='stylesheet' type='text/css' href='style.css'>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+<html>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function() {
+        var $form = $('form');
+        $form.submit(function() {
+            $.post($(this).attr('action'), $(this).serialize(), function(response) {
+                // do something here on success
+            }, 'json');
+            return false;
+        });
+    });
+</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoan Nguyen</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-col">
+            <div class="profile-img"><img src="images/photo.jpg"></div>
+            <div class="profile-section">
+                <div class="name">HOAN NGUYEN</div>
+                <div class="title"><span>THINKER & TINKERER</span></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate auctor enim a porta. Suspendisse bibendum eros nec magna tincidunt, et egestas eros vehicula.</p>
+            </div>
+            <div class="button-cont">
+                <div class="button-mobile"><a href="https://www.linkedin.com/in/hoannguyenb/" target="_blank">LinkedIn</a></div>
+                <div class="button-mobile"><a href="/files/Resume_HoanNguyen.pdf" download="Hoan Nguyen">Get My Resume</a></div>
+            </div>
+
+        </div>
+
+        <div class="right-col">
+            <div class="right-col-row">
+                <div id="experience" class="right-col-row-col">
+                    <div class="box-title">Experience</div>
+                    <div class="exp-cont">
+                        <div class="exp-title">
+                            WORK: POLECAT
+                        </div>
+                        <div class="divider"></div>
+                        <div class="exp-item">
+                            <ul>
+                                <li>SENIOR ANALYST</li>
+                                <li>RESEARCH ANALYST</li>
+                                <li>PROJECT MANAGER</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exp-cont">
+                        <div class="exp-title">
+                            EDUCATION
+                        </div>
+                        <div class="divider"></div>
+                        <div class="exp-item">
+                            <ul>
+                                <li>UNIVERSITY OF TEXAS</li>
+                                <li>GENERAL ASSEMBLY</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exp-cont">
+                        <div class="exp-title">
+                            PROJECT
+                        </div>
+                        <div class="divider"></div>
+                        <div class="exp-item">
+                            <ul>
+                                <li>APP: NOM NOM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-col-row-col">
+                    <a href="https://www.linkedin.com/in/hoannguyenb/" target="_blank">
+                        <div id="social" class="right-col-row-col-row">
+                            <span><img src="images/linkedin2.png"></span>
+                            <div class="slide-message">connect with me</div>
+                        </div>
+                    </a>
+                    <div class="resume right-col-row-col-row">
+                        <div class="box-title">get my resume</div>
+
+                        <div class="slide-down">
+                            <a href="/files/Resume_HoanNguyen.pdf" download="Hoan Nguyen"><img src="https://www.disasterassistance.gov/sites/default/files/icons-disasterinfo-0109_white_downloadplugins.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-col-row">
+                <div id="skill-interest" class="right-col-row-col">
+                    <div id="skills">
+                        <div class="box-title">Skills</div>
+                        <div class="slide-right">
+                            <p>PYTHON, TRELLO, SQL, TABLEAU, REDMINE, PROJECT MANAGEMENT, EXCEL</p>
+                        </div>
+                    </div>
+                    <div id="interest">
+                        <div class="box-title">Interests</div>
+                        <div class="slide-left">
+                            <p>TRAVELING, FILM PHOTOGRAPHY, VIDEO GAME, ROCK CLIMBING, CAMPING, WOODWORKING</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="right-col-row-col">
+                    <div class="mobile box-title">leave me a message</div>
+                    <div class="flipper">
+                        <div class="front">
+                            <div class="box-title">leave me a message</div>
+                        </div>
+                        <div class="back">
+                            <form method="POST" action="https://script.google.com/macros/s/AKfycbxAKGi-fdjIdqGeFII8ZGbA_os_HhYha7VKRumiqE3DyOqz0Ps/exec" onsubmit="this.reset(); return false;">
+                                <input type="text" name="firstname" placeholder="your full name">
+                                <br>
+                                <input type="text" name="email" placeholder="email">
+                                <br/>
+                                <textarea rows="5" name="message" placeholder="write something"></textarea>
+                                <br/>
+                                <input type="submit" value="SUBMIT">
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        Created By: Hoang Long Vu To
+    </div>
+</body>
+
+</html>
